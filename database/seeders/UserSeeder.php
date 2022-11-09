@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
 
 class UserSeeder extends Seeder
 {
@@ -16,10 +16,20 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => 'miguel',
-            'email' => 'root@gmail.com',
-            'password' => Hash::make('password'),
+        // Default credentials
+        \App\Models\User::insert([
+            [
+                'name'              => 'Miguel',
+                'email'             => 'root@gmail.com',
+                'email_verified_at' => now(),
+                'password'          => Hash::make('password'),
+                'gender'            => 'male',
+                'active'            => 1,
+                'remember_token'    => Str::random(10)
+            ]
         ]);
+
+        // Fake users
+        User::factory()->times(9)->create();
     }
 }
