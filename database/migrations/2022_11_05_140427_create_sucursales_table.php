@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('sucursales', function (Blueprint $table) {
             $table->id();
             $table->string('razon_social', 255);
-            $table-
+            
             $table->timestamps();
         });
     }
