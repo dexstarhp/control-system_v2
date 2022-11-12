@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sucursales', function (Blueprint $table) {
+        schema::create ('sucursales', function(blueprint $table){
             $table->id();
-            $table->string('razon_social', 255);
-            
+            $table->string('razon_social');
+            $table->string('tipo_documento');
+            $table->string('numero_ducuemto');
+            $table->string('direccion');
+            $table->string('telefono');
+            $table->string('estado');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sucursales');
+        //
     }
 };

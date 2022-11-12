@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        schema::create ('detalles_documentos_sucursales', function(blueprint $table){
+            $table->id();
+            $table->string('ultima_serie');
+            $table->string('ultimo_numero');
+            $table->timestamps();
+        });
     }
 
     /**

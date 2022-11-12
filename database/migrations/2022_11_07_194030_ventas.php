@@ -13,7 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        schema::create ('ventas', function(blueprint $table){
+            $table->id();
+            $table->string('tipo_venta');
+            $table->string('tipo_comprobante');
+            $table->string('fecha');
+            $table->string('total');
+            $table->text('estado');
+            $table->timestamps();
+        });
     }
 
     /**

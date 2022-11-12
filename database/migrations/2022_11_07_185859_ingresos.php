@@ -13,7 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        schema::create ('ingresos', function(blueprint $table){
+            $table->id();
+            $table->text('detalles');
+            $table->string('producto');
+            $table->string('numero_comprobante');
+            $table->string('fecha_date');
+            $table->string('estado');
+            $table->timestamps();
+        });
     }
 
     /**

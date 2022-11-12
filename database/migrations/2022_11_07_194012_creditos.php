@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        schema::create ('creditos', function(blueprint $table){
+            $table->id();
+            $table->string('fecha_pago');
+            $table->string('total_pago');
+            $table->timestamps();
+        });
     }
 
     /**

@@ -13,7 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        schema::create ('articulos', function(blueprint $table){
+            $table->id();
+            $table->string('nombre');
+            $table->string('estado');
+            $table->text('descripcion');
+            $table->timestamps();
+        });
     }
 
     /**

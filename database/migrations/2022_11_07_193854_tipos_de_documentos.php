@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        schema::create ('tipos_de_documentos', function(blueprint $table){
+            $table->id();
+            $table->string('nombre');
+            $table->string('operacion');
+            $table->timestamps();
+        });
     }
 
     /**
