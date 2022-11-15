@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('numero_ducuemto');
             $table->string('direccion');
             $table->string('telefono');
-            $table->string('estado');
+            $table->boolean('estado');
             $table->timestamps();
         });
     }
