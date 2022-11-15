@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\DarkModeController;
 use App\Http\Controllers\ColorSchemeController;
+use App\Http\Controllers\InicioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +28,9 @@ Route::controller(AuthController::class)->middleware('loggedin')->group(function
 
 Route::middleware('auth')->group(function() {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/', [InicioController::class, 'index'])->name('inicio');
     Route::controller(PageController::class)->group(function() {
-        Route::get('/', 'dashboardOverview1')->name('dashboard-overview-1');
+        //Route::get('/', 'dashboardOverview1')->name('dashboard-overview-1');
         Route::get('dashboard-overview-2-page', 'dashboardOverview2')->name('dashboard-overview-2');
         Route::get('dashboard-overview-3-page', 'dashboardOverview3')->name('dashboard-overview-3');
         Route::get('dashboard-overview-4-page', 'dashboardOverview4')->name('dashboard-overview-4');
