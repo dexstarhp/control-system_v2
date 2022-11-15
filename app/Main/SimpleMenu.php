@@ -15,11 +15,11 @@ class SimpleMenu
         return [
             'dashboard' => [
                 'icon' => 'home',
-                'title' => 'Dashboard',
+                'title' => 'Inicio',
                 'sub_menu' => [
-                    'dashboard-overview-1' => [
+                    'inicio' => [
                         'icon' => '',
-                        'route_name' => 'dashboard-overview-1',
+                        'route_name' => 'inicio',
                         'params' => [
                             'layout' => 'simple-menu',
                         ],
