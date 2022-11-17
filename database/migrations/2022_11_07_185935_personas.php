@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('tipo_persona');
             $table->string('nombre');
             $table->string('tipo_documento');
-            $table->string('numero_documento');
+            $table->integer('numero_documento');
             $table->string('email');
             $table->string('estado');
             $table->timestamps();

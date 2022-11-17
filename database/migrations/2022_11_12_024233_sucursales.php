@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('razon_social');
             $table->string('tipo_documento');
-            $table->string('numero_ducuemto');
+            $table->integer('numero_ducuemto');
             $table->string('direccion');
-            $table->string('telefono');
+            $table->integer('telefono');
             $table->boolean('estado');
             $table->timestamps();
         });

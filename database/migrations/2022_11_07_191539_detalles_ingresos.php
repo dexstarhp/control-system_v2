@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('stock_ingreso');
             $table->string('Stock_actual');
             $table->text('descripcion');
-            $table->string('precio_compra');
-            $table->string('precio_distribuidor');
-            $table->string('precio_publico');
+            $table->integer('precio_compra');
+            $table->integer('precio_distribuidor');
+            $table->integer('precio_publico');
             $table->timestamps();
         });
     }

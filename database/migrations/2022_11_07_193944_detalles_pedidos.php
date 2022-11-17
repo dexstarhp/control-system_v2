@@ -16,7 +16,7 @@ return new class extends Migration
         schema::create ('detalles_pedido', function(blueprint $table){
             $table->id();
             $table->text('detalles');
-            $table->string('precio_venta');
+            $table->integer('precio_venta');
             $table->timestamps();
         });
     }

@@ -18,8 +18,8 @@ return new class extends Migration
             $table->text('apellidos');
             $table->string('nombre');
             $table->string('tipo_documento');
-            $table->string('numero_documento');
-            $table->string('telefono');
+            $table->integer('numero_documento');
+            $table->integer('telefono');
             $table->string('estado');
             $table->timestamps();
         });

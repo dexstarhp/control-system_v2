@@ -15,8 +15,8 @@ return new class extends Migration
     {
         schema::create ('detalles_documentos_sucursales', function(blueprint $table){
             $table->id();
-            $table->string('ultima_serie');
-            $table->string('ultimo_numero');
+            $table->integer('ultima_serie');
+            $table->integer('ultimo_numero');
             $table->timestamps();
         });
     }

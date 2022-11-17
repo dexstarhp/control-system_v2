@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('empresa');
             $table->string('simbolo_moneda');
             $table->string('nombre_impuesto');
-            $table->string('porcentaje_impuesto');
+            $table->integer('porcentaje_impuesto');
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('tipo_venta');
             $table->string('tipo_comprobante');
             $table->date('fecha');
-            $table->string('total');
+            $table->integer('total');
             $table->text('estado');
             $table->timestamps();
         });
