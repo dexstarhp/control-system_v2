@@ -28,7 +28,7 @@ class SideMenu
                 ],
             ],
 
-            'chat' => [
+                'chat' => [
                 'icon' => 'message-square',
                 'route_name' => null,
                 'params' => [

@@ -16,7 +16,7 @@ return new class extends Migration
         schema::create ('pedidos', function(blueprint $table){
             $table->id();
             $table->string('tipo_pedido');
-            $table->string('fecha');
+            $table->date('fecha');
             $table->string('estado');
             $table->timestamps();
         });

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         schema::create ('creditos', function(blueprint $table){
             $table->id();
-            $table->string('fecha_pago');
-            $table->string('total_pago');
+            $table->date('fecha_pago');
+            $table->date('total_pago');
             $table->timestamps();
         });
     }

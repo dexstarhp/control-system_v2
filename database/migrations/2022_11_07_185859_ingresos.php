@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('detalles');
             $table->string('producto');
             $table->string('numero_comprobante');
-            $table->string('fecha_date');
+            $table->date('fecha_date');
             $table->string('estado');
             $table->timestamps();
         });
