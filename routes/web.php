@@ -6,6 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\DarkModeController;
 use App\Http\Controllers\ColorSchemeController;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,14 @@ Route::controller(AuthController::class)->middleware('loggedin')->group(function
 Route::middleware('auth')->group(function() {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/', [InicioController::class, 'index'])->name('inicio');
+
+    // crud usuarios
+    //ruta para el listado de usaurios
+    Route::get('usuarios',[UsuarioController::class, 'index'])->name('usuario.index');
+    Route::get('usuarios/nuevo',[UsuarioController::class, 'create'])->name('usuario.create');
+    Route::post('usuarios/nuevo',[UsuarioController::class, 'store'])->name('usuario.store');
+
+
     Route::controller(PageController::class)->group(function() {
         //Route::get('/', 'dashboardOverview1')->name('dashboard-overview-1');
         Route::get('dashboard-overview-2-page', 'dashboardOverview2')->name('dashboard-overview-2');

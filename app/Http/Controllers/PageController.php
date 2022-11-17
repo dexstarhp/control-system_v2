@@ -251,7 +251,7 @@ class PageController extends Controller
      */
     public function usersLayout1()
     {
-        return view('pages/users-layout-1');
+        return view('pages.users-layout-1');
     }
 
     /**

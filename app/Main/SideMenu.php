@@ -76,33 +76,25 @@ class SideMenu
                     ]
                 ]
             ],
-            'users' => [
+            'usuarios' => [
                 'icon' => 'users',
-                'title' => 'Users',
+                'title' => 'Usuarios',
                 'sub_menu' => [
-                    'users-layout-1' => [
+                    'usuario.index' => [
                         'icon' => '',
-                        'route_name' => 'users-layout-1',
+                        'route_name' => 'usuario.index',
                         'params' => [
                             'layout' => 'side-menu'
                         ],
-                        'title' => 'Layout 1'
+                        'title' => 'Lista'
                     ],
-                    'users-layout-2' => [
+                    'usuario.create' => [
                         'icon' => '',
-                        'route_name' => 'users-layout-2',
+                        'route_name' => 'usuario.create',
                         'params' => [
                             'layout' => 'side-menu'
                         ],
-                        'title' => 'Layout 2'
-                    ],
-                    'users-layout-3' => [
-                        'icon' => '',
-                        'route_name' => 'users-layout-3',
-                        'params' => [
-                            'layout' => 'side-menu'
-                        ],
-                        'title' => 'Layout 3'
+                        'title' => 'Nuevo usuario'
                     ]
                 ]
             ],
